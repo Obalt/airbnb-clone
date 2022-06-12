@@ -89,7 +89,7 @@ const selectionRange ={
       </div>
       
       {searchInput && (
-        <div className='flex flex-col col-span-3 mx-auto'>
+        <div className='flex flex-col col-span-2 mx-auto'>
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}
@@ -99,7 +99,7 @@ const selectionRange ={
 
           <div className="flex items-center border-b border-t-gray-800 mb-6">
             <h2 className="text-2xl flex-grow font-semibold">Number of guests</h2>
-            <UsersIcon className="h-6"  />
+            <UsersIcon className="h-7 pr-1"  />
             <input 
             value={numberOfGuests}
             onChange={(e) => setNumberOfGuests(e.target.value)}
@@ -109,8 +109,8 @@ const selectionRange ={
             "/>
           </div>
           <div className="flex">
-            <button onClick={resetInput} className="flex-grow text-gray-600">Cancel</button>
-            <button onClick={search} className="flex-grow text-green-900">Search</button>
+            <button onClick={resetInput} className="pb-6 flex-grow text-gray-600 ">Cancel</button>
+            <button onClick={search} className="pb-6 flex-grow text-green-900">Search</button>
             </div>
          
         </div>

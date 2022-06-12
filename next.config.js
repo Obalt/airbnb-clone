@@ -19,4 +19,9 @@ module.exports = {
       "www.places.co.za",
     ],
   },
+
+  env: {
+    mapbox_key:
+      "pk.eyJ1Ijoib2JhbHQiLCJhIjoiY2w0YTFpcXg2MGV3ajNlbjVldWt4ZTVjeiJ9.ySTXH-QalVCSCf01EMeskQ",
+  },
 };

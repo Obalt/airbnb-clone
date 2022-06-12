@@ -3,6 +3,7 @@ import Footer from "../components/Footer"
 import { useRouter } from "next/router";
 import { format } from "date-fns"
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map"
 
 function Search({ searchResults }) {
     const router = useRouter(); 
@@ -55,6 +56,10 @@ function Search({ searchResults }) {
             )}
           </div>
         </section>
+
+        <section className="cursor-pointer min-w-[600px]">
+          <Map searchResults={searchResults}/>
+        </section>
       </main>
 
       <Footer />
@@ -65,7 +70,7 @@ function Search({ searchResults }) {
 export default Search; 
 
 export async function getServerSideProps () {
-    const searchResults = await fetch("https://jsonkeeper.com/b/OD4P").then(
+    const searchResults = await fetch(" https://jsonkeeper.com/b/NNCJ").then(
       (res) => res.json()
     );
 
@@ -75,3 +80,7 @@ export async function getServerSideProps () {
         }
     }
 }
+
+
+
+//  https://jsonkeeper.com/b/9IER
