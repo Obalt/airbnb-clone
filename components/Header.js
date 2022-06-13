@@ -80,7 +80,7 @@ const selectionRange ={
       {/* Right */}
       <div className='flex items-center space-x-3 justify-end text-gray-500'>
         <p className='hidden md:inline cursor-pointer'>Become a host</p>
-        <GlobeAltIcon className='h-6 cursor-pointer' />
+        <GlobeAltIcon className='h-6 cursor-pointer animate-spin' />
 
         <div className='flex items-center space-x-2 border-2 border-y-2 rounded-full pl-2 pr-2'>
           <MenuIcon className='h-6' />
