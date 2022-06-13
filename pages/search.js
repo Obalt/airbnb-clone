@@ -57,7 +57,7 @@ function Search({ searchResults }) {
           </div>
         </section>
 
-        <section className="hidden lg:inline-flex lg:min-w-[600px] cursor-pointer">
+        <section className="hidden lg:inline-flex lg:min-w-[400] cursor-pointer">
           <Map searchResults={searchResults}/>
         </section>
       </main>

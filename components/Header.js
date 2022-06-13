@@ -50,13 +50,13 @@ const selectionRange ={
 }
 
 
-
-
-
   return (
-    <header className=' sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-1 md:px-5'>
+    <header className=' sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-1 md:px-5 lg:px-1'>
       {/* left */}
-      <div onClick={ () => router.push('/')} className='relative flex items-center h-28 cursor-pointer my-auto animate-pulse'>
+      <div
+        onClick={() => router.push("/")}
+        className='relative flex items-center h-28 cursor-pointer my-auto animate-pulse'
+      >
         <Image
           src='https://cdn.freebiesupply.com/images/large/2x/airbnb-logo-black-transparent.png'
           layout='fill'
@@ -72,7 +72,7 @@ const selectionRange ={
           onChange={(e) => setSearchInput(e.target.value)}
           className='flex-grow pl-2 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-300'
           type='text '
-          placeholder={placeholder||'Start your search'}
+          placeholder={placeholder || "Start your search"}
         />
         <SearchIcon className=' hidden md:inline-flex h-8 bg-black-400 bg-black text-white rounded-full p-2 cursor-pointer md:mx-2' />
       </div>
@@ -87,32 +87,41 @@ const selectionRange ={
           <UserCircleIcon className='h-6' />
         </div>
       </div>
-      
+
       {searchInput && (
-        <div className='flex flex-col col-span-2 mx-auto'>
-          <DateRangePicker
+        <div className='flex flex-col justify-center bg-white mt-1 rounded-b-lg rounded-t-sm shadow-sm col-span-3 lg:w-auto'>
+          <DateRangePicker className="pb-4"
             ranges={[selectionRange]}
             minDate={new Date()}
             rangeColors={["Black"]}
             onChange={handleSelect}
           />
 
-          <div className="flex items-center border-b border-t-gray-800 mb-6">
-            <h2 className="text-2xl flex-grow font-semibold">Number of guests</h2>
-            <UsersIcon className="h-7 pr-1"  />
-            <input 
-            value={numberOfGuests}
-            onChange={(e) => setNumberOfGuests(e.target.value)}
-            type="number" 
-            min={1}
-            className="w-12 pl-2 text-lg text-gray-600 outline-none
-            "/>
+          <div className='flex items-center border-b border-t-gray-800 mb-6 shadow-sm'>
+            <h2 className='text-2xl flex-grow font-semibold'>
+              Number of guests
+            </h2>
+            <UsersIcon className='h-7 pr-2' />
+            <input
+              value={numberOfGuests}
+              onChange={(e) => setNumberOfGuests(e.target.value)}
+              type='number'
+              min={1}
+              className='w-8 text-m text-gray-600 outline-none
+            '
+            />
           </div>
-          <div className="flex">
-            <button onClick={resetInput} className="pb-6 flex-grow text-gray-600 ">Cancel</button>
-            <button onClick={search} className="pb-6 flex-grow text-green-900">Search</button>
-            </div>
-         
+          <div className='flex pl-0'>
+            <button
+              onClick={resetInput}
+              className='pb-6 flex-grow text-gray-600 '
+            >
+              Cancel
+            </button>
+            <button onClick={search} className='pb-6 flex-grow text-green-900'>
+              Search
+            </button>
+          </div>
         </div>
       )}
     </header>
