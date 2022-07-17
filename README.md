@@ -1,6 +1,8 @@
 # Next.js + Tailwind CSS Example
 <img width="846" alt="Airbnb" src="https://user-images.githubusercontent.com/103001500/179400379-061f32e1-52e4-4271-abff-009ce9bbe54e.png">
 
+<img width="835" alt="Airbnb2" src="https://user-images.githubusercontent.com/103001500/179400553-7f3d820a-e91b-49ac-869d-2da8d20ee628.png">
+
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
